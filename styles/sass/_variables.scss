@@ -2,11 +2,15 @@
 //PALETA DE COLORES
 
 $colorPrincipal-50:#EFEBE9;
-$colorSecundario-440:#795548;
-
+$colorSecundario-400:#8d6e63;
+$colorTerciario-600: #6d4c41 ;
 
 
 // Fuentes
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:wght@200&family=Varela+Round&display=swap');
+
+
 
 $fuentePrincipal:'Varela Round', sans-serif;
+$fuenteTitulos:'Fuzzy Bubbles', cursive;

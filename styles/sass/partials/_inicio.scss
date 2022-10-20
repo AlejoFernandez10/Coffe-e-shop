@@ -1,35 +1,51 @@
 
 .body-inicio{
     height: 100vh;
-    background: linear-gradient(to left, rgba(0, 0, 0, .9), rgba(0, 0, 0, .6) ), url(../../../assets/desktop-background.jpg) center center no-repeat fixed ;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .7), rgba(0, 0, 0, .8) ), url(../.././assets/fondo.jpg) center center no-repeat fixed ;
     background-size: cover;
-    padding-right: 50px;
 
     .main-inicio{
-        height: 80vh;
-        @include flex(column, center, flex-end);
+        height: 100vh;
+        @include flex(column, center, center);
         
 
         .main__text-button-container{
-            width: 60%;
-            align-self: flex-end;
+            align-self: center;
             @include flex(column, center, center);
 
             .main__title{
-                margin-top: 50px;
                 color: $colorPrincipal-50;
-                font-size: 95px;
-                font-family: $fuentePrincipal;
-                white-space: nowrap;
+                font-size: 50px;
+                font-family: $fuenteTitulos;
                 align-self: center;
+                margin-top: 30px;
+                white-space: nowrap;
+                font-weight: 700;
+
+                @include min-mobile{
+                    font-size: 60px;
+                }
+
+                @include max-mobile{
+                    font-size: 72px;
+                }
             }
 
             .main__texto-principal{
-                color: #999;
-                font-size: 16px;
+                color: #ccc;
+                font-size: 12px;
                 text-align: center;
                 padding-top: 20px;
-                font-family: $fuentePrincipal;
+                margin-right: 15px;
+                margin-left: 15px;
+
+                @include min-mobile{
+                    font-size: 14px;
+                }
+
+                @include max-mobile{
+                    font-size: 17px;
+                }
             }
     
             .main__button{
@@ -37,13 +53,17 @@
                 font-family: $fuentePrincipal;
                 font-size: 20px;
 
-                @include padding (20px,20px,50px,50px);
-                border: 2px solid $colorSecundario-440;
+                @include padding (15px,15px,40px,40px);
+                border: 2px solid $colorTerciario-600;
                 border-radius: 15px;
                 color: $colorPrincipal-50;
                 margin-top: 50px;
                 align-self: center;
+                cursor: pointer;
 
+                &:hover{
+                    background-color: #795548;
+                }
                 
             }
 

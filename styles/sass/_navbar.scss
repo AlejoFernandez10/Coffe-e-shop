@@ -1,0 +1,17 @@
+
+.header{
+    width: 100%;
+    @include flex(row, center,center);
+
+    .navbar{
+        max-width: 100%;
+
+        .container-fluid{
+            .navbar-brand{
+                color: #eee;
+                font-weight: 700;
+                font-family: $fuenteTitulos;
+            }
+        }
+    }
+}

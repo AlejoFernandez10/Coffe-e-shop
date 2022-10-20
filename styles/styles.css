@@ -1,57 +1,98 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:wght@200&family=Varela+Round&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header .navbar {
+  max-width: 100%;
+}
+.header .navbar .container-fluid .navbar-brand {
+  color: #eee;
+  font-weight: 700;
+  font-family: "Fuzzy Bubbles", cursive;
+}
+
 .body-inicio {
   height: 100vh;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url(../../../assets/desktop-background.jpg) center center no-repeat fixed;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../.././assets/fondo.jpg) center center no-repeat fixed;
   background-size: cover;
-  padding-right: 50px;
 }
 .body-inicio .main-inicio {
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
 .body-inicio .main-inicio .main__text-button-container {
-  width: 60%;
-  align-self: flex-end;
+  align-self: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .body-inicio .main-inicio .main__text-button-container .main__title {
-  margin-top: 50px;
   color: #EFEBE9;
-  font-size: 95px;
-  font-family: "Varela Round", sans-serif;
-  white-space: nowrap;
+  font-size: 50px;
+  font-family: "Fuzzy Bubbles", cursive;
   align-self: center;
+  margin-top: 30px;
+  white-space: nowrap;
+  font-weight: 700;
+}
+@media screen and (min-width: 400px) {
+  .body-inicio .main-inicio .main__text-button-container .main__title {
+    font-size: 60px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .body-inicio .main-inicio .main__text-button-container .main__title {
+    font-size: 72px;
+  }
 }
 .body-inicio .main-inicio .main__text-button-container .main__texto-principal {
-  color: #999;
-  font-size: 16px;
+  color: #ccc;
+  font-size: 12px;
   text-align: center;
   padding-top: 20px;
-  font-family: "Varela Round", sans-serif;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+@media screen and (min-width: 400px) {
+  .body-inicio .main-inicio .main__text-button-container .main__texto-principal {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .body-inicio .main-inicio .main__text-button-container .main__texto-principal {
+    font-size: 17px;
+  }
 }
 .body-inicio .main-inicio .main__text-button-container .main__button {
   background-color: transparent;
   font-family: "Varela Round", sans-serif;
   font-size: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 50px;
-  padding-left: 50px;
-  border: 2px solid #795548;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 40px;
+  padding-left: 40px;
+  border: 2px solid #6d4c41;
   border-radius: 15px;
   color: #EFEBE9;
   margin-top: 50px;
   align-self: center;
+  cursor: pointer;
+}
+.body-inicio .main-inicio .main__text-button-container .main__button:hover {
+  background-color: #795548;
 }/*# sourceMappingURL=styles.css.map */
