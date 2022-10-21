@@ -1,25 +1,40 @@
 
 .body-inicio{
     height: 100vh;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, .7), rgba(0, 0, 0, .8) ), url(../.././assets/fondo.jpg) center center no-repeat fixed ;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, .7) ), url(.././assets/fondo1.jpg) center no-repeat fixed ;
     background-size: cover;
 
+    @include desktop{
+        background: linear-gradient(to right, rgba(0, 0, 0, .3), rgba(0, 0, 0, .1) ), url(.././assets/fondo1.jpg) center center no-repeat fixed ;
+        background-size: cover;
+    }
+
     .main-inicio{
-        height: 100vh;
+        height: 95vh;
         @include flex(column, center, center);
         
+        @include desktop{
+               
+            .main__text-button-container{
+                align-self: flex-end;
+                @include flex(column, center, flex-end);
+                margin-right: 3%;
+                max-width: 45%;         
+            }    
+        }
 
         .main__text-button-container{
-            align-self: center;
+            
             @include flex(column, center, center);
+            
 
             .main__title{
                 color: $colorPrincipal-50;
                 font-size: 50px;
                 font-family: $fuenteTitulos;
                 align-self: center;
-                margin-top: 30px;
                 white-space: nowrap;
+                margin-top: 30px;
                 font-weight: 700;
 
                 @include min-mobile{
@@ -27,14 +42,13 @@
                 }
 
                 @include max-mobile{
-                    font-size: 72px;
+                    font-size: 65px;
                 }
             }
 
             .main__texto-principal{
                 color: #ccc;
                 font-size: 12px;
-                text-align: center;
                 padding-top: 20px;
                 margin-right: 15px;
                 margin-left: 15px;
@@ -47,26 +61,79 @@
                     font-size: 17px;
                 }
             }
-    
-            .main__button{
-                background-color:transparent;
-                font-family: $fuentePrincipal;
-                font-size: 20px;
+            
+            .botones-inicio{
 
-                @include padding (15px,15px,40px,40px);
-                border: 2px solid $colorTerciario-600;
-                border-radius: 15px;
-                color: $colorPrincipal-50;
-                margin-top: 50px;
-                align-self: center;
-                cursor: pointer;
-
-                &:hover{
-                    background-color: #795548;
-                }
                 
+                @include tablet{
+                    @include flex(row, center, center);
+                }
+
+                @include flex(column, center, center);
+                
+                .main__button{
+
+                    background-color:transparent;
+                    font-family: $fuentePrincipal;
+                    font-size: 17px;
+    
+                    @include padding (15px,15px,40px,40px);
+                    border: 2px solid $colorPrincipal-50;
+                    border-radius: 6px;
+                    color: #eee;
+                    margin-top: 20px;
+                    align-self: center;
+                    cursor: pointer;
+    
+                    &:hover{
+                        border-color: $colorSecundario-400;
+                        color: $colorSecundario-400;
+                        font-weight: bold;
+                    }
+
+                    @include min-mobile{font-size: 16px;}
+                    @include max-mobile{font-size: 18px;}
+                    @include tablet{
+                        margin-top: 50px;
+                        margin-right: 20px;
+                    }
+
+
+                    
+                }
+                .main__button-contacto{
+
+                    background-color:transparent;
+                    font-family: $fuentePrincipal;
+                    font-size: 17px;
+    
+                    @include padding (15px,15px,55px,55px);
+                    border: 2px solid $colorPrincipal-50;
+                    border-radius: 6px;
+                    color: #eee;
+                    margin-top: 20px;
+                    align-self: center;
+                    cursor: pointer;
+    
+                    &:hover{
+                        border-color: $colorSecundario-400;
+                        color: $colorSecundario-400;
+                        font-weight: bold;
+                    }
+
+                    @include min-mobile{font-size: 15px;}
+                    @include max-mobile{font-size: 17px;}
+                    @include tablet{
+                        margin-top: 50px;
+                        margin-right: 20px;
+                    }
+
+                }
+            
+
             }
 
+            
         }
         
         

@@ -3,3 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.body-no-index{
+    .header{
+        .navbar-no-gradient{
+            background: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, 0) ); 
+        }
+    }
+}
