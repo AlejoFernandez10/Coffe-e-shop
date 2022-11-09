@@ -17,6 +17,7 @@ const cafeDisponible = {
         2:"Vacío",
         3:"Cocido",
         4:"Goteo",
+        5:"Presión",
         precio: 1000,
     },
     espresso:{
