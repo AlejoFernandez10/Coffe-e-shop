@@ -12,6 +12,7 @@
 
 .header {
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -19,11 +20,11 @@
 }
 .header .navbar {
   height: 70px;
+  width: auto;
 }
 @media screen and (min-width: 992px) {
   .header .navbar {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
-    outline: 1px solid #555;
     padding: 0;
     margin: 0;
   }
@@ -42,8 +43,7 @@
 }
 @media screen and (min-width: 992px) {
   .header .navbar .container-fluid {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-right: 8%;
   }
 }
 .header .navbar .container-fluid .navbar-brand {
@@ -51,12 +51,23 @@
   font-weight: 700;
   font-family: "Fuzzy Bubbles", cursive;
 }
+@media screen and (min-width: 992px) {
+  .header .navbar .container-fluid .navbar-brand img {
+    margin-top: 15px;
+    margin-left: 100px;
+  }
+}
 .header .navbar .container-fluid .offcanvas .offcanvas-body .navbar-nav .nav-item .nav-link {
   margin-top: 10px;
   font-family: "Varela Round", sans-serif;
   font-size: 17px;
   color: #eee;
   margin-right: 15px;
+}
+@media screen and (min-width: 992px) {
+  .header .navbar .container-fluid .offcanvas .offcanvas-body .navbar-nav .nav-item .nav-link {
+    color: #444;
+  }
 }
 
 .body-inicio {
@@ -68,10 +79,12 @@
   .body-inicio {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(.././assets/fondo1.jpg) center center no-repeat fixed;
     background-size: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .body-inicio .main-inicio {
-  height: 95vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -113,12 +126,18 @@
     font-size: 65px;
   }
 }
+@media screen and (min-width: 992px) {
+  .body-inicio .main-inicio .main__text-button-container .main__title {
+    font-size: 75px;
+  }
+}
 .body-inicio .main-inicio .main__text-button-container .main__texto-principal {
   color: #ccc;
   font-size: 12px;
   padding-top: 20px;
   margin-right: 15px;
   margin-left: 15px;
+  font-family: "Varela Round", sans-serif;
 }
 @media screen and (min-width: 400px) {
   .body-inicio .main-inicio .main__text-button-container .main__texto-principal {
@@ -136,6 +155,11 @@
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 992px) {
+  .body-inicio .main-inicio .main__text-button-container .botones-inicio {
+    margin-left: 20px;
+  }
+}
 @media screen and (min-width: 600px) {
   .body-inicio .main-inicio .main__text-button-container .botones-inicio {
     display: flex;
@@ -149,7 +173,7 @@
   font-family: "Varela Round", sans-serif;
   font-size: 17px;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 16px;
   padding-right: 40px;
   padding-left: 40px;
   border: 2px solid #EFEBE9;
@@ -184,8 +208,8 @@
   background-color: transparent;
   font-family: "Varela Round", sans-serif;
   font-size: 17px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   padding-right: 55px;
   padding-left: 55px;
   border: 2px solid #EFEBE9;
@@ -215,4 +239,128 @@
     margin-top: 50px;
     margin-right: 20px;
   }
+}
+
+.body-no-index {
+  background-color: #EFEBE9;
+}
+
+.main-cart {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+.main-cart #pedido {
+  height: auto;
+  width: 40%;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 130px;
+}
+.main-container .ir-al-carrito {
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 50px;
+  border: 1px solid #ca663b;
+}
+.main-container .ir-al-carrito a {
+  text-decoration: none;
+  color: #ca663b;
+}
+.main-container .ir-al-carrito:hover {
+  background-color: #ca663b;
+}
+.main-container .ir-al-carrito:hover a {
+  color: #fff;
+}
+.main-container .crear-pedido-img {
+  height: 450px;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(../../assets/pexels-jason-villanueva-851555.jpg) no-repeat right center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 600px) {
+  .main-container .crear-pedido-img {
+    max-width: 1200px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .main-container .crear-pedido-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+.main-container .crear-pedido-img .img-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (min-width: 700px) {
+  .main-container .crear-pedido-img .img-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+}
+.main-container .crear-pedido-img .img-items .h3 {
+  color: #EFEBE9;
+  font-size: 55px;
+}
+.main-container .crear-pedido-img .img-items p {
+  color: #EFEBE9;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  .main-container .crear-pedido-img .img-items p {
+    margin-left: 30px;
+  }
+}
+.main-container .crear-pedido-img .img-items .crear-pedido-button {
+  background-color: transparent;
+  font-family: "Varela Round", sans-serif;
+  font-size: 17px;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  padding-right: 40px;
+  padding-left: 40px;
+  border: 2px solid #EFEBE9;
+  border-radius: 6px;
+  color: #eee;
+  margin-top: 20px;
+  align-self: center;
+  cursor: pointer;
+}
+.main-container .crear-pedido-img .img-items .crear-pedido-button:hover {
+  border-color: #ca663b;
+  color: #ca663b;
+  font-weight: bold;
 }/*# sourceMappingURL=styles.css.map */

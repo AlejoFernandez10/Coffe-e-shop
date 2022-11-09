@@ -1,0 +1,86 @@
+.main-container{
+    height: 100vh;
+    width: 100%;
+    @include flex(column, center, center);
+    padding-top: 130px;
+
+
+    .ir-al-carrito{
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 50px;
+        border: 1px solid $colorSecundario-400;
+
+        a{
+            text-decoration: none;
+            color: $colorSecundario-400;
+        }
+        &:hover{
+            background-color: $colorSecundario-400;
+            a{
+                color: #fff;
+            }
+        }
+       
+
+        
+    }
+
+    .crear-pedido-img{
+        height: 450px;
+        width:100% ;
+        background:linear-gradient(to bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .5) ), url(../../assets/pexels-jason-villanueva-851555.jpg) no-repeat right center ;
+        border-radius: 10px;
+
+        @include tablet{
+            max-width: 1200px;
+        }
+        @include flex(column,center,center);
+        @media screen and (min-width:700px) {
+            @include flex(column,center,flex-start);
+        }
+        
+        .img-items{
+            @include flex(column,center,center);
+            width: 100%;
+            @media screen and (min-width:700px) {
+                @include flex(column,center,center);
+                width: 50%;
+            }
+            .h3{
+                color: $colorPrincipal-50;
+                font-size: 55px;
+            }
+            p{
+                color: $colorPrincipal-50;
+                margin-top: 40px;
+                margin-bottom: 50px;
+                text-align: center;
+                @include tablet{
+                    margin-left: 30px;
+                }
+            }
+            .crear-pedido-button{
+                background-color:transparent;
+                        font-family: $fuentePrincipal;
+                        font-size: 17px;
+        
+                        @include padding (15px,16px,40px,40px);
+                        border: 2px solid $colorPrincipal-50;
+                        border-radius: 6px;
+                        color: #eee;
+                        margin-top: 20px;
+                        align-self: center;
+                        cursor: pointer;
+        
+                        &:hover{
+                            border-color: $colorSecundario-400;
+                            color: $colorSecundario-400;
+                            font-weight: bold;
+                        }
+            }
+        }
+        
+        
+    }
+}
