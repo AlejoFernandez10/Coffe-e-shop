@@ -41,7 +41,7 @@ const cantidadesPrecio = {
 
 // FUNCIONES
 
-const tiposDeCafe = () =>{
+/* const tiposDeCafe = () =>{
     let preguntaTiposDeCafe=  prompt(`Elija su tipo de cafe:
     1-Ristretto
     2-Espresso intenso
@@ -49,7 +49,7 @@ const tiposDeCafe = () =>{
     4-Capuccino
     5-Latte Macchiato
 
-    `);    
+    `);     */
 
     //VALIDACION
     while(preguntaTiposDeCafe < 1 || preguntaTiposDeCafe > 5){

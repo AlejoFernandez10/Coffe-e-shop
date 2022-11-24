@@ -270,9 +270,10 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   align-items: center;
   padding-top: 130px;
+  background-color: #fff;
 }
 .main-container .ir-al-carrito {
   padding: 10px;
@@ -332,12 +333,17 @@
 .main-container .crear-pedido-img .img-items .h3 {
   color: #EFEBE9;
   font-size: 55px;
+  padding-top: 150px;
+  position: relative;
+  bottom: 50px;
 }
 .main-container .crear-pedido-img .img-items p {
   color: #EFEBE9;
   margin-top: 40px;
   margin-bottom: 50px;
   text-align: center;
+  position: relative;
+  bottom: 70px;
 }
 @media screen and (min-width: 600px) {
   .main-container .crear-pedido-img .img-items p {
@@ -363,4 +369,86 @@
   border-color: #ca663b;
   color: #ca663b;
   font-weight: bold;
+}
+.main-container .comoFunciona {
+  height: auto;
+  width: 90%;
+  background-color: #EFEBE9;
+  border-radius: 15px;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  border-bottom: 5px solid #fff;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 600px) {
+  .main-container .comoFunciona {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main-container .comoFunciona {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    padding: 50px;
+  }
+}
+.main-container .comoFunciona .paso {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #2b323a;
+  padding: 10px;
+  text-align: center;
+}
+.main-container .comoFunciona .paso h4 {
+  font-size: 25px;
+  margin-top: 10px;
+}
+.main-container .comoFunciona .paso p {
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.main-container .comoFunciona .paso .numeroDePaso {
+  font-size: 50px;
+  color: #ca663b;
+  font-weight: bold;
+}
+.main-container .pedido .pasosEnOpciones {
+  display: none;
+}
+.main-container .pedido .opciones {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.main-container .pedido .opciones .opcionTipoDeCafe {
+  text-align: left;
+}
+.main-container .pedido .opciones .opcion {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.main-container .pedido .opciones .opcion .eleccion {
+  height: 270px;
+  width: 250px;
+  background-color: #EFEBE9;
+  border-radius: 10px;
+  margin: auto;
+  cursor: pointer;
+}
+.main-container .pedido .opciones .opcion .eleccion h4 {
+  padding-top: 30px;
+  padding-left: 30px;
+  font-size: 23px;
+  font-weight: bolder;
+}
+.main-container .pedido .opciones .opcion .eleccion p {
+  padding-left: 30px;
+  margin-right: 25px;
+  margin-top: 20px;
+  opacity: 0.9;
 }/*# sourceMappingURL=styles.css.map */
