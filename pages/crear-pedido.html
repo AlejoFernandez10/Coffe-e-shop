@@ -81,38 +81,37 @@
       </div>
     </div>
     <div class="pedido">
-      
-
-      <div class="opciones-container">
-
-        <div class="pasosEnOpciones">
-          <div class="paso-opcion paso1">
-            <span class="numeroDePaso">01</span>
-            <h4>Elegi tu <span>cafe</span></h4>
-            
-          </div>
     
-          <div class="paso-opcion paso2 ">
-            <span class="numeroDePaso">02</span>
-            <h4>Elegi la <span>cantidad</span></h4>
-            
-          </div>
-    
-          <div class="paso-opcion paso3">
-            <span class="numeroDePaso">03</span>
-            <h4>Elegi la <span>frecuencia</span></h4>
-            
-          </div>
-        </div>
 
-        <div class="opciones">
+        <div class="opciones-container" id="opciones">
 
-          <div class="opcion opcionTipoDeCafe" id="opcion1">
-
-              <h2 style="opacity:.9 ; margin-bottom:40px ;">Como quiere que preparemos su <span style="color:#ca663b; opacity:1; font-weight: bold;">café</span> ?</h2>
+          <div class="pasosEnOpciones">
+            <div class="paso-opcion paso1">
+              <span class="numeroDePaso">01</span>
+              <h5 style="margin-bottom:20px;">Elegi tu <span>cafe</span></h5>
               
-              <div class="eleccion capsula" id="capsula">
-                <h4>Capsula</h4>
+            </div>
+      
+            <div class="paso-opcion paso2 ">
+              <span class="numeroDePaso">02</span>
+              <h5 style="margin-bottom:20px ;">Elegi la <span>cantidad</span></h5>
+              
+            </div>
+      
+            <div class="paso-opcion paso3">
+              <span class="numeroDePaso">03</span>
+              <h5 style="margin-bottom:10px ;">Elegi la <span>frecuencia</span></h5>
+              
+            </div>
+          </div>
+
+          <div>
+            <h2 style="opacity:.9 ; margin-bottom:40px;" id="h2">Como quiere que preparemos su <span style="color:#ca663b; opacity:1; font-weight: bold;">café</span> ?</h2>
+          
+          <div class="opcion opcionTipoDeCafe" id="opcion1">              
+              
+              <div class="eleccion capsula" id="capsula" >
+                <h4 >Capsula</h4>
                 <p>Compatible con sistemas Nespresso y mezcladores similares</p>
               </div>
 
@@ -127,19 +126,26 @@
               </div>
           </div>
   
-          <div class="opcion " id="opcion2Cafes">
+          <div class="opcion cafeDisponibles " id="opcion2Cafes">
   
           </div>
   
-          <div class="opcion cantidades">
+          <div class="opcion cantidades" id="opcion3Cantidad">
   
           </div>
   
-          <div class="opcion cadenciaDelivery">
+          <div class="opcion cadenciaDelivery" id="opcion4Frecuencia">
   
+          </div>
+
+          <div class="resumenPedido" id="pedidoResumen">
+
           </div>
           
         </div>
+            
+          </div>
+          
         
       </div>
         

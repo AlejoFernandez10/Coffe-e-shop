@@ -416,23 +416,64 @@
   color: #ca663b;
   font-weight: bold;
 }
-.main-container .pedido .pasosEnOpciones {
-  display: none;
-}
-.main-container .pedido .opciones {
+.main-container .pedido .opciones-container {
+  max-width: 1200px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   margin-top: 40px;
 }
-.main-container .pedido .opciones .opcionTipoDeCafe {
+.main-container .pedido .opciones-container .opcionTipoDeCafe {
   text-align: left;
 }
-.main-container .pedido .opciones .opcion {
+.main-container .pedido .opciones-container .pasosEnOpciones {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .main-container .pedido .opciones-container .pasosEnOpciones {
+    display: inline-block;
+    width: 50%;
+    margin-left: 2%;
+    margin-top: 80px;
+    border-left: 1px solid #ca663b;
+    height: 200px;
+  }
+}
+.main-container .pedido .opciones-container .pasosEnOpciones .paso-opcion {
+  padding-left: 15px;
+}
+.main-container .pedido .opciones-container .pasosEnOpciones .paso-opcion .numeroDePaso {
+  font-size: 20px;
+  color: #ca663b;
+  font-weight: bold;
+}
+.main-container .pedido .opciones-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .main-container .pedido .opciones-container div {
+    align-items: flex-start;
+  }
+}
+.main-container .pedido .opciones-container div .opcion {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
 }
-.main-container .pedido .opciones .opcion .eleccion {
+@media screen and (min-width: 600px) {
+  .main-container .pedido .opciones-container div .opcion {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main-container .pedido .opciones-container div .opcion {
+    grid-template-columns: repeat(3, 1fr);
+    width: 50%;
+    margin: 0;
+  }
+}
+.main-container .pedido .opciones-container div .opcion .eleccion {
   height: 270px;
   width: 250px;
   background-color: #EFEBE9;
@@ -440,15 +481,32 @@
   margin: auto;
   cursor: pointer;
 }
-.main-container .pedido .opciones .opcion .eleccion h4 {
+.main-container .pedido .opciones-container div .opcion .eleccion h4 {
   padding-top: 30px;
   padding-left: 30px;
   font-size: 23px;
   font-weight: bolder;
+  align-self: flex-start;
 }
-.main-container .pedido .opciones .opcion .eleccion p {
+.main-container .pedido .opciones-container div .opcion .eleccion p {
   padding-left: 30px;
   margin-right: 25px;
   margin-top: 20px;
   opacity: 0.9;
+}
+.main-container .pedido .opciones-container div .opcion .activa {
+  background-color: #ca663b;
+  color: #fff;
+}
+.main-container .pedido .opciones-container div .resumenPedido {
+  height: 220px;
+  width: 70%;
+  color: #2b323a;
+  padding: 25px;
+  font-size: 19px;
+  text-align: center;
+  border-radius: 10px;
+  align-self: center;
+  justify-self: center;
+  margin-top: 50px;
 }/*# sourceMappingURL=styles.css.map */

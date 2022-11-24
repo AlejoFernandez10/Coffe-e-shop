@@ -1,7 +1,7 @@
 const resumenPedido = [];
 const precioTotal = [];
 
-const cafeDisponible = {
+/* const cafeDisponible = {
     capsula:{
         nombre:"capsula",
         1:"Ristretto",
@@ -49,7 +49,7 @@ const cantidadesPrecio = {
     4-Capuccino
     5-Latte Macchiato
 
-    `);     */
+    `);     
 
     //VALIDACION
     while(preguntaTiposDeCafe < 1 || preguntaTiposDeCafe > 5){
@@ -252,4 +252,4 @@ resumenPedido.forEach(e => {
     pedido.appendChild(createDiv);
 }) 
 
-
+ */
