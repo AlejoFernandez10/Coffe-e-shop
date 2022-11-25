@@ -62,9 +62,11 @@ elecciones.forEach(eleccion =>{
 
 const preguntaFrecuencia = ()=>{
 
-    let h2 = document.getElementById(`h2`);    
-    h2.innerHTML = `Elija la frecuencia con la que desea recibir su <span style="color:#ca663b; opacity:1; font-weight: bold;">café</span>`;
+    let h2 = document.getElementById(`h2-frecuencia`);    
+    h2.style.display = `inline`;
     h2.style.marginBottom = `50px`;
+    h2.style.marginTop = `50px`;
+
 
     frecuencias.forEach(opcionDefrecuencia =>{
         let div = document.createElement(`div`);
@@ -87,9 +89,11 @@ const preguntaFrecuencia = ()=>{
 
 const preguntaCantidad = ()=>{
 
-    let h2 = document.getElementById(`h2`);    
-    h2.innerHTML = `Elija la cantidad que <span style="color:#ca663b; opacity:1; font-weight: bold;">desea</span>`;
+
+    let h2 = document.getElementById(`h2-cantidad`);    
+    h2.style.display = `inline`
     h2.style.marginBottom = `50px`;
+    h2.style.marginTop = `50px`;
 
     cantidades.forEach(opcionDeCantidad =>{
         let div = document.createElement(`div`);
@@ -107,7 +111,7 @@ const preguntaCantidad = ()=>{
         opcion3Cantidad.appendChild(div);
     })
     opcion3Cantidad.addEventListener(`click`, ()=>{
-        opcion3Cantidad.style.display = `none`,
+        /* opcion3Cantidad.style.display = `none`, */
         preguntaFrecuencia()
     })
 }
@@ -120,12 +124,13 @@ const mostrarOpcionesDesplegables = (tiposDeCafe, opcionesDeCafe)=>{
 
     tiposDeCafe.addEventListener(`click`,() =>{
 
-        opcion1.style.display = `none`;
+        /* opcion1.style.display = `none`; */
 
         
-        let h2 = document.getElementById(`h2`);    
-        h2.innerHTML = `Elija entre nuestros cafés en <span style="color:#ca663b; opacity:1; font-weight: bold;">Capsula</span>`;
+        let h2 = document.getElementById(`h2-opcion2`);    
+        h2.style.display = `inline`;
         h2.style.marginBottom = `50px`;
+        h2.style.marginTop = `50px`;
     
         opcionesDeCafe.forEach(cafe =>{
             let div = document.createElement(`div`);
@@ -145,7 +150,7 @@ const mostrarOpcionesDesplegables = (tiposDeCafe, opcionesDeCafe)=>{
         });
         
         opcion2Cafes.addEventListener(`click`, ()=>{
-            opcion2Cafes.style.display = "none";
+            /* opcion2Cafes.style.display = "none"; */
             preguntaCantidad()
         })
     });
@@ -158,7 +163,7 @@ mostrarOpcionesDesplegables(filtro, cafesEnFiltro);
 mostrarOpcionesDesplegables(espresso, cafesEnEspresso);
 
 
-console.log(resumen);
+
 textoDeResumen.innerHTML = `
     <p>Tomo mi café en ${resumen[0]}, quiero granos de tipo ${resumen[1]}, un paquete de ${resumen[2]}, y quiero que me lo traigan ${resumen[3]} </p>
 `
