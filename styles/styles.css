@@ -5,7 +5,6 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  transition: 1s;
 }
 
 .body-no-index .header .navbar-no-gradient {
@@ -277,6 +276,12 @@
   background-color: #EFEBE9;
   border-radius: 15px;
 }
+@media screen and (min-width: 992px) {
+  .main-cart .precios {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
 .main-cart .precios .productos-container {
   width: 100%;
   display: flex;
@@ -421,7 +426,6 @@
   display: grid;
   grid-template-columns: 1fr;
   border-bottom: 5px solid #fff;
-  margin-bottom: 30px;
 }
 @media screen and (min-width: 600px) {
   .main-container .comoFunciona {
@@ -517,9 +521,32 @@
     margin: 0;
   }
 }
+.main-container .pedido .opciones-container div .opcion .elegida {
+  background-color: #ca663b;
+  border: 1px solid #2b323a;
+  color: #fff;
+  height: 250px;
+  width: 230px;
+  border-radius: 10px;
+  margin: auto;
+  cursor: pointer;
+}
+.main-container .pedido .opciones-container div .opcion .elegida h4 {
+  padding-top: 30px;
+  padding-left: 30px;
+  font-size: 23px;
+  font-weight: bolder;
+  align-self: flex-start;
+}
+.main-container .pedido .opciones-container div .opcion .elegida p {
+  padding-left: 30px;
+  margin-right: 25px;
+  margin-top: 20px;
+  opacity: 0.9;
+}
 .main-container .pedido .opciones-container div .opcion .eleccion {
-  height: 270px;
-  width: 250px;
+  height: 250px;
+  width: 230px;
   background-color: #EFEBE9;
   border-radius: 10px;
   margin: auto;
@@ -537,8 +564,4 @@
   margin-right: 25px;
   margin-top: 20px;
   opacity: 0.9;
-}
-.main-container .pedido .opciones-container div .opcion .activa {
-  background-color: #ca663b;
-  color: #fff;
 }/*# sourceMappingURL=styles.css.map */

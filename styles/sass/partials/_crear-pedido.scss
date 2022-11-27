@@ -96,7 +96,7 @@
         display: grid;
         grid-template-columns: 1fr;
         border-bottom: 5px solid #fff;
-        margin-bottom: 30px;
+        
         
 
         @include tablet {
@@ -190,11 +190,35 @@
                         margin: 0;
                     }
                     
-                    
+                    .elegida{
+                        background-color: #ca663b;
+                        border: 1px solid #2b323a;
+                        color: #fff;
+                        height: 250px;
+                        width: 230px;
+                        border-radius: 10px;
+                        margin: auto;
+                        cursor: pointer;
+    
+                        h4{
+                            padding-top: 30px;
+                            padding-left: 30px;
+                            font-size: 23px;
+                            font-weight: bolder;
+                            align-self: flex-start;
+                        }
+                        p{
+                            padding-left: 30px;
+                            margin-right: 25px;
+                            margin-top: 20px;
+                            opacity: .9;
+                        }
+                        
+                    }
     
                     .eleccion{
-                        height: 270px;
-                        width: 250px;
+                        height: 250px;
+                        width: 230px;
                         background-color: $colorPrincipal-50;
                         border-radius: 10px;
                         margin: auto;
@@ -214,11 +238,7 @@
                             opacity: .9;
                         }
                     }
-                    .activa{
-                        background-color: #ca663b;
-                        color: #fff;
-                        
-                    }
+                    
                     
                 }
                 

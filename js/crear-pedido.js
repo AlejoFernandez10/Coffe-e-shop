@@ -15,9 +15,8 @@ const espresso = document.getElementById(`espresso`);
 
 
 
-
 const cafesEnCapsula = [
-    {nombre:"Ristretto",descripcion:"Lorem ipsum etc", precio: 1200},
+    {nombre:"Ristretto",descripcion:"Lorem ipsum etc", precio:1200},
     {nombre:"Espresso intenso",descripcion:"Lorem ipsum etc", precio: 1200},
     {nombre:"Caffé Crema",descripcion:"Lorem ipsum etc", precio: 1200},
     {nombre:"Capuccino",descripcion:"Lorem ipsum etc", precio: 1200},
@@ -34,14 +33,14 @@ const cafesEnFiltro = [
 const cafesEnEspresso = [
     {nombre:"Ristretto", descripcion:"Vacia por ahora", precio: 1800},
     {nombre:"Espresso intenso", descripcion:"Vacia por ahora", precio: 1800},
-    {nombre:"Latte", descripcion:"Vacia por ahora", precio: 1800},
+    {nombre:"Latte", descripcion:"Vacia por ahora", precio:1800},
     {nombre:"Capuccino", descripcion:"Vacia por ahora", precio: 1800},
 ]
 
 const cantidades = [
     {cantidad:"250g", descripcion:"Ideal para un consumidor de cafe solitario", precio: 1000},
-    {cantidad:"500g", descripcion:"Ideal para un consumidor de cafe solitario", precio: 1800},
-    {cantidad:"1000g", descripcion:"Ideal para un consumidor de cafe solitario", precio: 3250},
+    {cantidad:`500g`, descripcion:"Ideal para un consumidor de cafe solitario", precio: 1800},
+    {cantidad:`1000g`, descripcion:"Ideal para un consumidor de cafe solitario", precio: 3250},
 ]
 
 const frecuencias = [
@@ -51,7 +50,17 @@ const frecuencias = [
 ]
 
 
+const cambioColorAlClickear = (primeraEleccion) =>{
 
+    return primeraEleccion.addEventListener(`click`, () =>{
+        primeraEleccion.classList.remove(`eleccion`);           //CAmbio de color al ser seleccionada
+        primeraEleccion.classList.add(`elegida`)
+    })
+    
+}
+cambioColorAlClickear(capsula);
+cambioColorAlClickear(filtro);
+cambioColorAlClickear(espresso);
 
 
 const preguntaFrecuencia = ()=>{
@@ -72,8 +81,10 @@ const preguntaFrecuencia = ()=>{
         <p>${opcionDefrecuencia.descripcion}</p>
         `;
         div.addEventListener(`click`, ()=>{
-            sessionStorage.setItem(`Frecuencia-solicitada`, opcionDefrecuencia.frecuencia)
-            sessionStorage.setItem(`precioFrecuenciaSolicitada`, JSON.stringify(opcionDefrecuencia.precio))
+            div.classList.remove(`eleccion`);
+            div.classList.add(`elegida`);
+            sessionStorage.setItem(`Frecuencia-solicitada`, JSON.stringify(opcionDefrecuencia.frecuencia))
+            sessionStorage.setItem(`precioFrecuenciaSolicitada`, opcionDefrecuencia.precio)
             
         })
 
@@ -103,9 +114,10 @@ const preguntaCantidad = ()=>{
 
         
         div.addEventListener(`click`, ()=>{
-            sessionStorage.setItem(`CantidadSolicitada`, opcionDeCantidad.cantidad)
-            sessionStorage.setItem(`PrecioCantidadSolicitada`, JSON.stringify(opcionDeCantidad.precio))
-            JSON.parse(sessionStorage.getItem(`Precio`));
+            div.classList.remove(`eleccion`);
+            div.classList.add(`elegida`);
+            sessionStorage.setItem(`CantidadSolicitada`, JSON.stringify(opcionDeCantidad.cantidad))
+            sessionStorage.setItem(`PrecioCantidadSolicitada`, opcionDeCantidad.precio)            
 
         });
 
@@ -146,9 +158,11 @@ const mostrarOpcionesDesplegables = (tiposDeCafe, opcionesDeCafe)=>{
             opcion2Cafes.appendChild(div);
             
             div.addEventListener(`click`, ()=>{
-                sessionStorage.setItem(`Cafe-solicitado`,cafe.nombre )                
-                sessionStorage.setItem(`PrecioCafeSolicitado`,JSON.stringify(cafe.precio) )
-                JSON.parse(sessionStorage.getItem(cafe.precio))
+                div.classList.remove(`eleccion`);
+                div.classList.add(`elegida`);
+                sessionStorage.setItem(`Cafe-solicitado`,JSON.stringify(cafe.nombre) )                
+                sessionStorage.setItem(`PrecioCafeSolicitado`, cafe.precio)
+               
             })
         });
         

@@ -28,6 +28,11 @@
         padding: 20px;
         background-color: $colorPrincipal-50;
         border-radius: 15px;
+
+        @include desktop{
+            padding-right: 60px;
+            padding-left: 60px;
+        }
         
         .productos-container{
             width: 100%;
@@ -42,7 +47,6 @@
                 width: 100%;
                 max-width: 800px;
                 @include flex(row, space-between,center);
-
                 
             }
         }
