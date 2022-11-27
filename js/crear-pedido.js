@@ -12,40 +12,42 @@ const capsula = document.getElementById(`capsula`);
 const filtro = document.getElementById(`filtro`);
 const espresso = document.getElementById(`espresso`);
 
-const textoDeResumen = document.getElementById(`pedidoResumen`)
+
+
+
 
 const cafesEnCapsula = [
-    {nombre:"Ristretto",descripcion:"Lorem ipsum etc", precio: 1500},
-    {nombre:"Espresso intenso",descripcion:"Lorem ipsum etc", precio: 1500},
-    {nombre:"Caffé Crema",descripcion:"Lorem ipsum etc", precio: 1500},
-    {nombre:"Capuccino",descripcion:"Lorem ipsum etc", precio: 1500},
-    {nombre:"Latte Macchiato",descripcion:"Lorem ipsum etc", precio: 1500}
+    {nombre:"Ristretto",descripcion:"Lorem ipsum etc", precio: 1200},
+    {nombre:"Espresso intenso",descripcion:"Lorem ipsum etc", precio: 1200},
+    {nombre:"Caffé Crema",descripcion:"Lorem ipsum etc", precio: 1200},
+    {nombre:"Capuccino",descripcion:"Lorem ipsum etc", precio: 1200},
+    {nombre:"Latte Macchiato",descripcion:"Lorem ipsum etc", precio: 1200}
 ];
 
 const cafesEnFiltro = [
     {nombre:"Inmerso", descripcion:"Vacia por ahora", precio: 1500},
     {nombre:"Vacío", descripcion:"Vacia por ahora", precio: 1500},
     {nombre:"Cocido", descripcion:"Vacia por ahora", precio: 1500},
-    {nombre:"A presión", descripcion:"Vacia por ahora", precio: 1500},
+    {nombre:"a presión", descripcion:"Vacia por ahora", precio: 1500},
 ]
 
 const cafesEnEspresso = [
-    {nombre:"Ristretto", descripcion:"Vacia por ahora", precio: 1500},
-    {nombre:"Espresso intenso", descripcion:"Vacia por ahora", precio: 1500},
-    {nombre:"Latte", descripcion:"Vacia por ahora", precio: 1500},
-    {nombre:"Capuccino", descripcion:"Vacia por ahora", precio: 1500},
+    {nombre:"Ristretto", descripcion:"Vacia por ahora", precio: 1800},
+    {nombre:"Espresso intenso", descripcion:"Vacia por ahora", precio: 1800},
+    {nombre:"Latte", descripcion:"Vacia por ahora", precio: 1800},
+    {nombre:"Capuccino", descripcion:"Vacia por ahora", precio: 1800},
 ]
 
 const cantidades = [
-    {cantidad:"250g", descripcion:"Ideal para un consumidor de cafe solitario", precio: 1500},
-    {cantidad:"500g", descripcion:"Ideal para un consumidor de cafe solitario", precio: 1500},
-    {cantidad:"1000g", descripcion:"Ideal para un consumidor de cafe solitario", precio: 1500},
+    {cantidad:"250g", descripcion:"Ideal para un consumidor de cafe solitario", precio: 1000},
+    {cantidad:"500g", descripcion:"Ideal para un consumidor de cafe solitario", precio: 1800},
+    {cantidad:"1000g", descripcion:"Ideal para un consumidor de cafe solitario", precio: 3250},
 ]
 
 const frecuencias = [
-    {frecuencia:"Por semana", descripcion:"Ideal para un consumidor de cafe solitario", precio: 1500},
+    {frecuencia:"Por semana", descripcion:"Ideal para un consumidor de cafe solitario", precio: 1800},
     {frecuencia:"Por quincena", descripcion:"Ideal para un consumidor de cafe solitario", precio: 1500},
-    {frecuencia:"Por mes", descripcion:"Ideal para un consumidor de cafe solitario", precio: 1500},
+    {frecuencia:"Por mes", descripcion:"Ideal para un consumidor de cafe solitario", precio: 1200},
 ]
 
 
@@ -71,8 +73,8 @@ const preguntaFrecuencia = ()=>{
         `;
         div.addEventListener(`click`, ()=>{
             sessionStorage.setItem(`Frecuencia-solicitada`, opcionDefrecuencia.frecuencia)
-            sessionStorage.setItem(`PrecioFrecuenciasolicitada`, JSON.stringify(opcionDefrecuencia.precio))
-            JSON.parse(opcionDefrecuencia.precio)
+            sessionStorage.setItem(`precioFrecuenciaSolicitada`, JSON.stringify(opcionDefrecuencia.precio))
+            
         })
 
         opcion4Frecuencia.appendChild(div);
@@ -103,7 +105,8 @@ const preguntaCantidad = ()=>{
         div.addEventListener(`click`, ()=>{
             sessionStorage.setItem(`CantidadSolicitada`, opcionDeCantidad.cantidad)
             sessionStorage.setItem(`PrecioCantidadSolicitada`, JSON.stringify(opcionDeCantidad.precio))
-            JSON.parse(sessionStorage.getItem(`Precio`))
+            JSON.parse(sessionStorage.getItem(`Precio`));
+
         });
 
         opcion3Cantidad.appendChild(div);
@@ -163,8 +166,6 @@ mostrarOpcionesDesplegables(filtro, cafesEnFiltro);
 mostrarOpcionesDesplegables(espresso, cafesEnEspresso);
 
 
-textoDeResumen.innerHTML = `
-    <p>Quiero granos de tipo <span style="color:#ca663b;">${sessionStorage.getItem(`Cafe-solicitado`)}</span>, un paquete de <span style="color:#ca663b;">${sessionStorage.getItem(`CantidadSolicitada`)}</span>, y quiero que me lo traigan <span style="color:#ca663b;">${sessionStorage.getItem(`Frecuencia-solicitada`)}</span> </p>
-`
+
 
 

@@ -1,18 +1,56 @@
-.body-no-index{
-    background-color: $colorPrincipal-50;
-}
+
 
 .main-cart{
     height: 100vh;
     width: 100%;
     @include flex(column,center,center);
-    margin-top: 10%;
     
-    #pedido{
+    #pedidoResumen{
         height: auto;
-        width: 40%;
-        background-color: #fff;
+        width: 80%;
+        max-width: 600px;
+        background-color: $colorPrincipal-50;
         border-radius: 10px;
-        @include flex(column,center,center)
+        margin-top: 20px;
+        
+        @include flex(column,center,center);
+        padding: 20px;
+        @include tablet{
+            font-size: 20px;
+        }
+
+    }
+
+    .precios{
+        display: flex;
+        width: 80%;
+        padding: 20px;
+        background-color: $colorPrincipal-50;
+        border-radius: 15px;
+        
+        .productos-container{
+            width: 100%;
+            @include flex(column, center,flex-start);
+
+            @include desktop{
+                @include flex(column, center,center);
+                height: 300px;
+            }
+
+            .productos{
+                width: 100%;
+                max-width: 800px;
+                @include flex(row, space-between,center);
+
+                
+            }
+        }
+
+        span{
+            margin-top: 5px;
+            @include desktop{
+                margin-top: 15px;
+            }
+        }
     }
 }
