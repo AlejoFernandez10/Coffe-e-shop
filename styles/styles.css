@@ -272,6 +272,7 @@
 .main-cart .precios {
   display: flex;
   width: 80%;
+  max-width: 1000px;
   padding: 20px;
   background-color: #EFEBE9;
   border-radius: 15px;
@@ -540,16 +541,4 @@
 .main-container .pedido .opciones-container div .opcion .activa {
   background-color: #ca663b;
   color: #fff;
-}
-.main-container .pedido .opciones-container div .resumenPedido {
-  height: 220px;
-  width: 70%;
-  color: #2b323a;
-  padding: 25px;
-  font-size: 19px;
-  text-align: center;
-  border-radius: 10px;
-  align-self: center;
-  justify-self: center;
-  margin-top: 50px;
 }/*# sourceMappingURL=styles.css.map */

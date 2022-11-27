@@ -12,7 +12,7 @@
         background-color: $colorPrincipal-50;
         border-radius: 10px;
         margin-top: 20px;
-        
+
         @include flex(column,center,center);
         padding: 20px;
         @include tablet{
@@ -24,6 +24,7 @@
     .precios{
         display: flex;
         width: 80%;
+        max-width: 1000px;
         padding: 20px;
         background-color: $colorPrincipal-50;
         border-radius: 15px;
