@@ -5,10 +5,12 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  transition: 0.5s;
 }
 
 .body-no-index .header .navbar-no-gradient {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  background-color: #fff;
 }
 
 .header {
@@ -275,11 +277,17 @@
   padding: 20px;
   background-color: #EFEBE9;
   border-radius: 15px;
+  height: 25rem;
 }
 @media screen and (min-width: 992px) {
   .main-cart .precios {
     padding-right: 60px;
     padding-left: 60px;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
 }
 .main-cart .precios .productos-container {
@@ -315,6 +323,146 @@
   }
 }
 
+.contacto-main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+.contacto-main-container .donde-encontrarnos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contacto-main-container .donde-encontrarnos h3 {
+  font-size: 30px;
+  text-decoration: underline;
+}
+.contacto-main-container .donde-encontrarnos p {
+  text-align: center;
+}
+.contacto-main-container .donde-encontrarnos iframe {
+  height: 400px;
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+}
+.contacto-main-container .contacto-center-div {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.contacto-main-container .contacto-center-div .form-img-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contacto-main-container .contacto-center-div .contacto-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.contacto-main-container .contacto-center-div .contacto-image img {
+  width: 100%;
+  height: 40em;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-left: 10px;
+  -webkit-animation: aparicionImgContacto 1s 1;
+          animation: aparicionImgContacto 1s 1;
+}
+@-webkit-keyframes aparicionImgContacto {
+  from {
+    transform: translateX(-1000px);
+  }
+}
+@keyframes aparicionImgContacto {
+  from {
+    transform: translateX(-1000px);
+  }
+}
+.contacto-main-container .contacto-center-div .contacto-form-container {
+  margin-top: 50px;
+  margin-left: 10px;
+  height: 40em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  border-radius: 7px;
+  border: 1px solid #000;
+  -webkit-animation: aparicionContactoForm 1s 1;
+          animation: aparicionContactoForm 1s 1;
+}
+@-webkit-keyframes aparicionContactoForm {
+  from {
+    transform: translateX(800px);
+  }
+}
+@keyframes aparicionContactoForm {
+  from {
+    transform: translateX(800px);
+  }
+}
+.contacto-main-container .contacto-center-div .contacto-form-container h2 {
+  font-size: 29px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: #000;
+}
+.contacto-main-container .contacto-center-div .contacto-form-container .contacto-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contacto-main-container .contacto-center-div .contacto-form-container .contacto-form input {
+  height: 2.5em;
+  width: 20em;
+  margin: 5px;
+  border: 2px solid #000;
+}
+.contacto-main-container .contacto-center-div .contacto-form-container .contacto-form .mb-3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contacto-main-container .contacto-center-div .contacto-form-container .contacto-form .mb-3 .form-control {
+  width: 70%;
+}
+.contacto-main-container .contacto-center-div .contacto-form-container .contacto-form .mb-3 .form-label {
+  margin-top: 15px;
+  color: #777;
+  align-self: flex-start;
+  margin-left: 15%;
+}
+.contacto-main-container .contacto-center-div .contacto-form-container .contacto-form .mb-3 textarea {
+  width: 95%;
+  margin: auto;
+}
+.contacto-main-container .contacto-center-div .contacto-form-container .contacto-form .contacto-submit {
+  margin: 15px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+.contacto-main-container .contacto-center-div .contacto-form-container .contacto-form .contacto-submit:hover {
+  background-color: #ca663b;
+  border: 1px solid #ca663b;
+  transition: 0.5s;
+}
+
 .main-container {
   height: 100vh;
   width: 100%;
@@ -343,10 +491,22 @@
   width: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(../assets/pexels-jason-villanueva-851555.jpg) no-repeat right center;
   border-radius: 10px;
+  -webkit-animation: aparicionCrearPedidoImg 1s 1;
+          animation: aparicionCrearPedidoImg 1s 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@-webkit-keyframes aparicionCrearPedidoImg {
+  from {
+    transform: translateX(800px);
+  }
+}
+@keyframes aparicionCrearPedidoImg {
+  from {
+    transform: translateX(800px);
+  }
 }
 @media screen and (min-width: 600px) {
   .main-container .crear-pedido-img {
@@ -426,6 +586,18 @@
   display: grid;
   grid-template-columns: 1fr;
   border-bottom: 5px solid #fff;
+  -webkit-animation: aparicionComoFunciona 1s 1;
+          animation: aparicionComoFunciona 1s 1;
+}
+@-webkit-keyframes aparicionComoFunciona {
+  from {
+    transform: translateX(-800px);
+  }
+}
+@keyframes aparicionComoFunciona {
+  from {
+    transform: translateX(-800px);
+  }
 }
 @media screen and (min-width: 600px) {
   .main-container .comoFunciona {
@@ -483,7 +655,7 @@
     margin-left: 2%;
     margin-top: 80px;
     border-left: 1px solid #ca663b;
-    height: 200px;
+    height: 290px;
   }
 }
 .main-container .pedido .opciones-container .pasosEnOpciones .paso-opcion {
@@ -494,34 +666,37 @@
   color: #ca663b;
   font-weight: bold;
 }
-.main-container .pedido .opciones-container div {
+.main-container .pedido .opciones-container .centrar-opciones {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media screen and (min-width: 992px) {
-  .main-container .pedido .opciones-container div {
+  .main-container .pedido .opciones-container .centrar-opciones {
     align-items: flex-start;
+    width: 80%;
   }
 }
-.main-container .pedido .opciones-container div .opcion {
+.main-container .pedido .opciones-container .centrar-opciones .opcion {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
+  text-decoration: none;
 }
 @media screen and (min-width: 600px) {
-  .main-container .pedido .opciones-container div .opcion {
+  .main-container .pedido .opciones-container .centrar-opciones .opcion {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (min-width: 992px) {
-  .main-container .pedido .opciones-container div .opcion {
+  .main-container .pedido .opciones-container .centrar-opciones .opcion {
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
     margin: 0;
   }
 }
-.main-container .pedido .opciones-container div .opcion .elegida {
+.main-container .pedido .opciones-container .centrar-opciones .opcion .elegida {
   background-color: #ca663b;
   border: 1px solid #2b323a;
   color: #fff;
@@ -530,36 +705,39 @@
   border-radius: 10px;
   margin: auto;
   cursor: pointer;
+  text-decoration: none;
 }
-.main-container .pedido .opciones-container div .opcion .elegida h4 {
+.main-container .pedido .opciones-container .centrar-opciones .opcion .elegida h4 {
   padding-top: 30px;
   padding-left: 30px;
   font-size: 23px;
   font-weight: bolder;
   align-self: flex-start;
 }
-.main-container .pedido .opciones-container div .opcion .elegida p {
+.main-container .pedido .opciones-container .centrar-opciones .opcion .elegida p {
   padding-left: 30px;
   margin-right: 25px;
   margin-top: 20px;
   opacity: 0.9;
 }
-.main-container .pedido .opciones-container div .opcion .eleccion {
+.main-container .pedido .opciones-container .centrar-opciones .opcion .eleccion {
   height: 250px;
   width: 230px;
   background-color: #EFEBE9;
   border-radius: 10px;
   margin: auto;
   cursor: pointer;
+  text-decoration: none;
+  color: #2b323a;
 }
-.main-container .pedido .opciones-container div .opcion .eleccion h4 {
+.main-container .pedido .opciones-container .centrar-opciones .opcion .eleccion h4 {
   padding-top: 30px;
   padding-left: 30px;
   font-size: 23px;
   font-weight: bolder;
   align-self: flex-start;
 }
-.main-container .pedido .opciones-container div .opcion .eleccion p {
+.main-container .pedido .opciones-container .centrar-opciones .opcion .eleccion p {
   padding-left: 30px;
   margin-right: 25px;
   margin-top: 20px;

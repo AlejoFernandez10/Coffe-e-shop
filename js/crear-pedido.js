@@ -6,6 +6,8 @@ const opcion3Cantidad = document.getElementById(`opcion3Cantidad`);
 const opcion4Frecuencia = document.getElementById(`opcion4Frecuencia`);
 
 
+const carritoBtn = document.getElementById(`carrito-btn`)
+
 const elecciones = document.querySelectorAll(`eleccion`);
 
 const capsula = document.getElementById(`capsula`);
@@ -50,6 +52,24 @@ const frecuencias = [
 ]
 
 
+
+//SWEET ALERT
+
+const sweetAlert = ()=>{
+   Swal.fire({
+        title: 'Perfecto!',
+        text: 'Desea realizar el pago?',
+        icon: 'success',
+        confirmButtonText: '<a href="./cart.html" style="text-decoration:none;color:#fff;">Ir al carrito</a>'
+      } )
+      
+    }
+
+carritoBtn.addEventListener(`click`, ()=>{
+    sweetAlert()
+})
+
+
 const cambioColorAlClickear = (primeraEleccion) =>{
 
     return primeraEleccion.addEventListener(`click`, () =>{
@@ -69,7 +89,7 @@ const preguntaFrecuencia = ()=>{
     h2.style.display = `inline`;
     h2.style.marginBottom = `50px`;
     h2.style.marginTop = `50px`;
-
+    h2.innerHTML = `Con que frecuencia desea <span style="color:#ca663b;">recibirlo</span>?`
 
     frecuencias.forEach(opcionDefrecuencia =>{
         let div = document.createElement(`div`);
@@ -81,6 +101,7 @@ const preguntaFrecuencia = ()=>{
         <p>${opcionDefrecuencia.descripcion}</p>
         `;
         div.addEventListener(`click`, ()=>{
+            carritoBtn.style.display=`inline`;
             div.classList.remove(`eleccion`);
             div.classList.add(`elegida`);
             sessionStorage.setItem(`Frecuencia-solicitada`, JSON.stringify(opcionDefrecuencia.frecuencia))
@@ -101,7 +122,7 @@ const preguntaCantidad = ()=>{
     h2.style.display = `inline`
     h2.style.marginBottom = `50px`;
     h2.style.marginTop = `50px`;
-
+    h2.innerHTML = `Ingrese la cantidad que desea <span style="color:#ca663b;">recibir</span>`
     cantidades.forEach(opcionDeCantidad =>{
         let div = document.createElement(`div`);
 
@@ -143,6 +164,7 @@ const mostrarOpcionesDesplegables = (tiposDeCafe, opcionesDeCafe)=>{
         h2.style.display = `inline`;
         h2.style.marginBottom = `50px`;
         h2.style.marginTop = `50px`;
+        h2.innerHTML = `Que tipo de grano <span style="color:#ca663b;">desea</span>?`
     
         opcionesDeCafe.forEach(cafe =>{
             let div = document.createElement(`div`);
@@ -162,7 +184,7 @@ const mostrarOpcionesDesplegables = (tiposDeCafe, opcionesDeCafe)=>{
                 div.classList.add(`elegida`);
                 sessionStorage.setItem(`Cafe-solicitado`,JSON.stringify(cafe.nombre) )                
                 sessionStorage.setItem(`PrecioCafeSolicitado`, cafe.precio)
-               
+                
             })
         });
         
@@ -171,6 +193,8 @@ const mostrarOpcionesDesplegables = (tiposDeCafe, opcionesDeCafe)=>{
             preguntaCantidad()
         })
     });
+
+    
 
 }; 
 

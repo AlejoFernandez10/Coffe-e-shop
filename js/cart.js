@@ -4,12 +4,18 @@ const sumaTotal = document.getElementById(`suma`);
 
 const productosContainer = document.getElementById(`productos-container`);
 
+const granoNombre=document.getElementById(`granoNombre`);
+const frecuenciaId =document.getElementById(`frecuenciaId`);
+const cantidadId=document.getElementById(`cantidadId`);
 
 const granoPrecio = document.getElementById(`granoPrecio`);
 const frecuenciaPrecio = document.getElementById(`frecuenciaPrecio`);
 const cantidadPrecio = document.getElementById(`cantidadPrecio`);
 
 
+granoNombre.innerHTML =`Grano:  ${sessionStorage.getItem(`Cafe-solicitado`)}`;
+frecuenciaId.innerHTML=`Frecuencia:  ${sessionStorage.getItem(`Frecuencia-solicitada`)}`
+cantidadId.innerHTML = `Cantidad:  ${sessionStorage.getItem(`CantidadSolicitada`)}`
 
 granoPrecio.innerHTML = `<span>$${sessionStorage.getItem(`PrecioCafeSolicitado`)}</span>`; 
 frecuenciaPrecio.innerHTML = `<span>$${sessionStorage.getItem(`precioFrecuenciaSolicitada`)}</span>`;
