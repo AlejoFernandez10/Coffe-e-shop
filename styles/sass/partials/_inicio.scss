@@ -1,17 +1,18 @@
 
 .body-inicio{
-    height: 100vh;
+    height: 114vh;
     background: linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, .7) ), url(.././assets/fondo1.jpg) center no-repeat fixed ;
     background-size: cover;
 
     @include desktop{
-        background: linear-gradient(to right, rgba(0, 0, 0, .3), rgba(0, 0, 0, .1) ), url(.././assets/fondo1.jpg) center center no-repeat fixed ;
+        background: linear-gradient(to right, rgba(0, 0, 0, .6), rgba(0, 0, 0,.2) ), url(.././assets/fondo1.jpg) center center no-repeat fixed ;
         background-size:cover;
         object-fit: cover;
     }
 
     .main-inicio{
         height: 100vh;
+        
         @include flex(column, center, center);
         
         @include desktop{
@@ -20,7 +21,8 @@
                 align-self: flex-end;
                 @include flex(column, center, flex-end);
                 margin-right: 3%;
-                max-width: 45%;         
+                max-width: 45%;
+                margin-top: 100px;         
             }    
         }
 
@@ -144,11 +146,21 @@
         }
         
         .temp-container{
-            width: 50%;
+            width: 90%;
+            height: 100%;
             @include flex(column,center,center);
             
             #temperatura{
                 color: #fff;
+                font-size: 18px;
+                
+            }
+
+
+
+
+            @include desktop{
+                @include flex(column,flex-start,flex-start);
                 
             }
         }
