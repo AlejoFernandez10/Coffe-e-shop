@@ -18,11 +18,11 @@ const espresso = document.getElementById(`espresso`);
 
 
 const cafesEnCapsula = [
-    {nombre:"Ristretto",descripcion:"Lorem ipsum etc", precio:1200},
-    {nombre:"Espresso intenso",descripcion:"Lorem ipsum etc", precio: 1200},
-    {nombre:"Caffé Crema",descripcion:"Lorem ipsum etc", precio: 1200},
-    {nombre:"Capuccino",descripcion:"Lorem ipsum etc", precio: 1200},
-    {nombre:"Latte Macchiato",descripcion:"Lorem ipsum etc", precio: 1200}
+    {nombre:"Ristretto",descripcion:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel omnis beatae quisquam", precio:1200},
+    {nombre:"Espresso intenso",descripcion:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel omnis beatae quisquam", precio: 1200},
+    {nombre:"Caffé Crema",descripcion:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel omnis beatae quisquam", precio: 1200},
+    {nombre:"Capuccino",descripcion:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel omnis beatae quisquam", precio: 1200},
+    {nombre:"Latte Macchiato",descripcion:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel omnis beatae quisquam", precio: 1200}
 ];
 
 const cafesEnFiltro = [
@@ -60,7 +60,7 @@ const sweetAlert = ()=>{
         title: 'Perfecto!',
         text: 'Desea realizar el pago?',
         icon: 'success',
-        confirmButtonText: '<a href="./cart.html" style="text-decoration:none;color:#fff;">Ir al carrito</a>'
+        confirmButtonText: '<a href="../pages/cart.html" style="text-decoration:none;color:#fff;">Ir al carrito</a>'
       } )
       
     }
@@ -92,24 +92,25 @@ const preguntaFrecuencia = ()=>{
     h2.innerHTML = `Con que frecuencia desea <span style="color:#ca663b;">recibirlo</span>?`
 
     frecuencias.forEach(opcionDefrecuencia =>{
-        let div = document.createElement(`div`);
+        let a = document.createElement(`a`);
 
-        div.classList.add(`eleccion`);
+        a.classList.add(`eleccion`);
                                                                                 //OPCIONES DESPLEGABLES AL CLICKEAR CAPSULA
-        div.innerHTML = `
-        <h4>${opcionDefrecuencia.frecuencia}</h4>
-        <p>${opcionDefrecuencia.descripcion}</p>
+        a.innerHTML = `
+        <h4 class="titulo-eleccion">${opcionDefrecuencia.frecuencia}</h4>
+        <p class="parrafo-eleccion">${opcionDefrecuencia.descripcion}</p>
+        <span style:"color:color:#ca663b;" class="precio">$${opcionDefrecuencia.precio}</span>
         `;
-        div.addEventListener(`click`, ()=>{
+        a.addEventListener(`click`, ()=>{
             carritoBtn.style.display=`inline`;
-            div.classList.remove(`eleccion`);
-            div.classList.add(`elegida`);
+            a.classList.remove(`eleccion`);
+            a.classList.add(`elegida`);
             sessionStorage.setItem(`Frecuencia-solicitada`, JSON.stringify(opcionDefrecuencia.frecuencia))
             sessionStorage.setItem(`precioFrecuenciaSolicitada`, opcionDefrecuencia.precio)
             
         })
 
-        opcion4Frecuencia.appendChild(div);
+        opcion4Frecuencia.appendChild(a);
 
     })
 }    
@@ -123,26 +124,28 @@ const preguntaCantidad = ()=>{
     h2.style.marginBottom = `50px`;
     h2.style.marginTop = `50px`;
     h2.innerHTML = `Ingrese la cantidad que desea <span style="color:#ca663b;">recibir</span>`
-    cantidades.forEach(opcionDeCantidad =>{
-        let div = document.createElement(`div`);
 
-        div.classList.add(`eleccion`);
+    cantidades.forEach(opcionDeCantidad =>{
+        let a = document.createElement(`div`);
+
+        a.classList.add(`eleccion`);
                                                                                 //OPCIONES DESPLEGABLES AL CLICKEAR CAPSULA
-        div.innerHTML = `
-        <h4>${opcionDeCantidad.cantidad}</h4>
-        <p>${opcionDeCantidad.descripcion}</p>
+        a.innerHTML = `
+        <h4 class="titulo-eleccion">${opcionDeCantidad.cantidad}</h4>
+        <p class="parrafo-eleccion">${opcionDeCantidad.descripcion}</p>
+        <span style:"color:color:#ca663b;">$${opcionDeCantidad.precio}</span>
         `;
 
         
-        div.addEventListener(`click`, ()=>{
-            div.classList.remove(`eleccion`);
-            div.classList.add(`elegida`);
+        a.addEventListener(`click`, ()=>{
+            a.classList.remove(`eleccion`);
+            a.classList.add(`elegida`);
             sessionStorage.setItem(`CantidadSolicitada`, JSON.stringify(opcionDeCantidad.cantidad))
             sessionStorage.setItem(`PrecioCantidadSolicitada`, opcionDeCantidad.precio)            
 
         });
 
-        opcion3Cantidad.appendChild(div);
+        opcion3Cantidad.appendChild(a);
     })
     opcion3Cantidad.addEventListener(`click`, ()=>{
         /* opcion3Cantidad.style.display = `none`, */
@@ -167,21 +170,22 @@ const mostrarOpcionesDesplegables = (tiposDeCafe, opcionesDeCafe)=>{
         h2.innerHTML = `Que tipo de grano <span style="color:#ca663b;">desea</span>?`
     
         opcionesDeCafe.forEach(cafe =>{
-            let div = document.createElement(`div`);
+            let a = document.createElement(`a`);
     
-            div.classList.add(`eleccion`);
+            a.classList.add(`eleccion`);
                                                                                     //OPCIONES DESPLEGABLES AL CLICKEAR CAPSULA
-            div.innerHTML = `
-            <h4>${cafe.nombre}</h4>
-            <p>${cafe.descripcion}</p>
+            a.innerHTML = `
+            <h4 class="titulo-eleccion">${cafe.nombre}</h4>
+            <p class="parrafo-eleccion">${cafe.descripcion}</p>
+            <span style:"color:color:#ca663b;">$${cafe.precio}</span>
             `;
             
 
-            opcion2Cafes.appendChild(div);
+            opcion2Cafes.appendChild(a);
             
-            div.addEventListener(`click`, ()=>{
-                div.classList.remove(`eleccion`);
-                div.classList.add(`elegida`);
+            a.addEventListener(`click`, ()=>{
+                a.classList.remove(`eleccion`);
+                a.classList.add(`elegida`);
                 sessionStorage.setItem(`Cafe-solicitado`,JSON.stringify(cafe.nombre) )                
                 sessionStorage.setItem(`PrecioCafeSolicitado`, cafe.precio)
                 

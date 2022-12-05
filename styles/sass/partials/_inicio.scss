@@ -143,6 +143,14 @@
             
         }
         
-        
+        .temp-container{
+            width: 50%;
+            @include flex(column,center,center);
+            
+            #temperatura{
+                color: #fff;
+                
+            }
+        }
     }
 }

@@ -217,6 +217,7 @@
                             margin: auto;
                             cursor: pointer;
                             text-decoration: none;
+                            @include flex(column,center,center);
         
                             h4{
                                 padding-top: 30px;
@@ -230,7 +231,18 @@
                                 margin-right: 25px;
                                 margin-top: 20px;
                                 opacity: .9;
+                                font-size: 15px;
                             }
+                            .precio{
+                                padding-left: 30px;
+                                margin-top: 20px;
+                                justify-self: flex-end;
+                                align-self: flex-start;
+                                color: #fff;  
+                            }
+                            
+                                                              
+                            
                             
                         }
         
@@ -243,19 +255,27 @@
                             cursor: pointer;
                             text-decoration: none;
                             color: #2b323a;
+                            @include flex(column,center,center);
         
-                            h4{
-                                padding-top: 30px;
+                            .titulo-eleccion{
+                                
                                 padding-left: 30px;
                                 font-size: 23px;
                                 font-weight: bolder;
                                 align-self: flex-start;
                             }
-                            p{
+                            .parrafo-eleccion{
                                 padding-left: 30px;
                                 margin-right: 25px;
                                 margin-top: 20px;
                                 opacity: .9;
+                                font-size: 15px;
+                            }
+                            .precio{
+                                padding-left: 30px;
+                                margin-top: 20px;
+                                justify-self: flex-end;
+                                align-self: flex-start;                                
                             }
                         }
                         

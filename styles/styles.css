@@ -243,6 +243,16 @@
     margin-right: 20px;
   }
 }
+.body-inicio .main-inicio .temp-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.body-inicio .main-inicio .temp-container #temperatura {
+  color: #fff;
+}
 
 .main-cart {
   height: 100vh;
@@ -706,6 +716,10 @@
   margin: auto;
   cursor: pointer;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .main-container .pedido .opciones-container .centrar-opciones .opcion .elegida h4 {
   padding-top: 30px;
@@ -719,6 +733,14 @@
   margin-right: 25px;
   margin-top: 20px;
   opacity: 0.9;
+  font-size: 15px;
+}
+.main-container .pedido .opciones-container .centrar-opciones .opcion .elegida .precio {
+  padding-left: 30px;
+  margin-top: 20px;
+  justify-self: flex-end;
+  align-self: flex-start;
+  color: #fff;
 }
 .main-container .pedido .opciones-container .centrar-opciones .opcion .eleccion {
   height: 250px;
@@ -729,17 +751,27 @@
   cursor: pointer;
   text-decoration: none;
   color: #2b323a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.main-container .pedido .opciones-container .centrar-opciones .opcion .eleccion h4 {
-  padding-top: 30px;
+.main-container .pedido .opciones-container .centrar-opciones .opcion .eleccion .titulo-eleccion {
   padding-left: 30px;
   font-size: 23px;
   font-weight: bolder;
   align-self: flex-start;
 }
-.main-container .pedido .opciones-container .centrar-opciones .opcion .eleccion p {
+.main-container .pedido .opciones-container .centrar-opciones .opcion .eleccion .parrafo-eleccion {
   padding-left: 30px;
   margin-right: 25px;
   margin-top: 20px;
   opacity: 0.9;
+  font-size: 15px;
+}
+.main-container .pedido .opciones-container .centrar-opciones .opcion .eleccion .precio {
+  padding-left: 30px;
+  margin-top: 20px;
+  justify-self: flex-end;
+  align-self: flex-start;
 }/*# sourceMappingURL=styles.css.map */

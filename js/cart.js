@@ -36,3 +36,9 @@ if (sessionStorage.getItem(`Cafe-solicitado`) === null | sessionStorage.getItem(
     productosContainer.innerHTML = `<p style ="font-size:22px;">El carrito esta <span style="color:#ca663b;">vacío</span>...</p>`;
     textoDeResumen.innerHTML = `<p>Todavía no ha realizado su pedido</p>`
 }
+
+
+
+
+
+
