@@ -18,7 +18,7 @@
 
 <body style="background-color:#555;" class="body-inicio">
 
-    <header class="header" style="margin-bottom:100px;">
+    <header class="header" >
 
       <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
 
@@ -54,6 +54,14 @@
 
     <main class="main-inicio">
 
+
+      <div class="temp-container">
+        <h4 style="color: #fff;"><span style="color:#ca663b ; font-weight: bold;">Temperatura </span>actual en: <span id="ubicacion"></span></h4>
+        <div id="temperatura">°C</div>
+        <div id="texto"></div>
+        
+      </div>
+
         <div class="main__text-button-container">
             <div class="main__logo-container"><img src="./assets/drink-156144.svg" height="120px" alt=""></div>
             
@@ -65,15 +73,12 @@
               <a href="./pages/crear-pedido.html"><button type="button" class="main__button" >Empecemos</button></a>
               <a href="./pages/contact.html"><button type="button"  class="main__button-contacto" >Contacto</button></a>
             </div>
+
+            
             
         </div>
 
-        <div class="temp-container">
-          <h4 style="color: #fff;"><span style="color:#ca663b ;">Temperatura </span>Actual </h4>
-          <div id="temperatura">°C</div>
-          <div id="resumen"></div>
-          <div id="ubicacion"></div>
-        </div>
+        
         
 
     </main>
