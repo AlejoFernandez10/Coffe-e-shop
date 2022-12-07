@@ -52,11 +52,11 @@
     
                 @media screen and (min-width:700px) {
                     @include flex(column,center,center);
-                    width: 50%;
+                    width: 60%;
                 }
                 .h3{
                     color: $colorPrincipal-50;
-                    font-size: 55px;
+                    font-size: 50px;
                     padding-top: 150px;
                     position: relative;
                     bottom: 50px;

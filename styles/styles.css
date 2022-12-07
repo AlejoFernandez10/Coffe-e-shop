@@ -667,12 +667,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 60%;
   }
 }
 .main-container .crear-pedido-img .img-items .h3 {
   color: #EFEBE9;
-  font-size: 55px;
+  font-size: 50px;
   padding-top: 150px;
   position: relative;
   bottom: 50px;
