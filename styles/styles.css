@@ -57,7 +57,6 @@
 @media screen and (min-width: 992px) {
   .header .navbar .container-fluid .navbar-brand img {
     margin-top: 15px;
-    margin-left: 100px;
   }
 }
 .header .navbar .container-fluid .offcanvas .offcanvas-body .navbar-nav .nav-item .nav-link {
@@ -74,7 +73,7 @@
 }
 
 .body-inicio {
-  height: 114vh;
+  height: 100vh;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(.././assets/fondo1.jpg) center no-repeat fixed;
   background-size: cover;
 }
@@ -89,20 +88,49 @@
 .body-inicio .main-inicio {
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 @media screen and (min-width: 992px) {
-  .body-inicio .main-inicio .main__text-button-container {
+  .body-inicio .main-inicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .body-inicio .main-inicio .temp-container {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .body-inicio .main-inicio .temp-container #temperatura {
+    color: #fff;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 992px) and (min-width: 992px) {
+  .body-inicio .main-inicio .temp-container {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 100px;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .body-inicio .main-inicio .temp-container .main__text-button-container {
     align-self: flex-end;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     margin-right: 3%;
-    max-width: 45%;
-    margin-top: 100px;
+    max-width: 50%;
   }
 }
 .body-inicio .main-inicio .main__text-button-container {
@@ -244,25 +272,114 @@
     margin-right: 20px;
   }
 }
-.body-inicio .main-inicio .temp-container {
-  width: 90%;
-  height: 100%;
+
+.main-container .productos-img {
+  height: 450px;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(../assets/pexels-felicia-evelyn-limena-1568639.jpg) no-repeat center center fixed;
+  border-radius: 10px;
+  background-size: cover;
+  margin-bottom: 60px;
+  -webkit-animation: aparicionCrearPedidoImg 1s 1;
+          animation: aparicionCrearPedidoImg 1s 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.body-inicio .main-inicio .temp-container #temperatura {
-  color: #fff;
-  font-size: 18px;
+@-webkit-keyframes aparicionCrearPedidoImg {
+  from {
+    transform: translateX(800px);
+  }
 }
-@media screen and (min-width: 992px) {
-  .body-inicio .main-inicio .temp-container {
+@keyframes aparicionCrearPedidoImg {
+  from {
+    transform: translateX(800px);
+  }
+}
+@media screen and (min-width: 600px) {
+  .main-container .productos-img {
+    max-width: 1200px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .main-container .productos-img {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
   }
+}
+.main-container .productos-img .img-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (min-width: 700px) {
+  .main-container .productos-img .img-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+}
+.main-container .productos-img .img-items .h3 {
+  color: #EFEBE9;
+  font-size: 50px;
+  padding-top: 150px;
+  padding-bottom: 60px;
+  position: relative;
+  bottom: 50px;
+}
+.main-container .kits-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 50px;
+}
+.main-container .kits-container .kit {
+  height: 25em;
+  width: 20em;
+  background-color: #EFEBE9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-container .kits-container .kit img {
+  padding-top: 40px;
+}
+.main-container .kits-container .kit .descripcion {
+  padding-top: 40px;
+  padding-left: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.main-container .kits-container .kit a .agregarCarritoBtn {
+  background-color: transparent;
+  font-family: "Varela Round", sans-serif;
+  font-size: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border: 2px solid #ca663b;
+  color: #ca663b;
+  border-radius: 6px;
+  align-self: center;
+  cursor: pointer;
+}
+.main-container .kits-container .kit a .agregarCarritoBtn:hover {
+  background-color: #ca663b;
+  color: #EFEBE9;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .main-cart {
@@ -518,11 +635,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-@-webkit-keyframes aparicionCrearPedidoImg {
-  from {
-    transform: translateX(800px);
-  }
 }
 @keyframes aparicionCrearPedidoImg {
   from {
