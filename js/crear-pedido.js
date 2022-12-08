@@ -24,6 +24,7 @@ const cafesEnCapsula = [
     {nombre:"Capuccino",descripcion:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel omnis beatae quisquam", precio: 1200},
     {nombre:"Latte Macchiato",descripcion:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel omnis beatae quisquam", precio: 1200}
 ];
+localStorage.setItem(`cafes-en-capsula`, JSON.stringify(cafesEnCapsula));
 
 const cafesEnFiltro = [
     {nombre:"Inmerso", descripcion:"Vacia por ahora", precio: 1500},
@@ -31,6 +32,7 @@ const cafesEnFiltro = [
     {nombre:"Cocido", descripcion:"Vacia por ahora", precio: 1500},
     {nombre:"a presión", descripcion:"Vacia por ahora", precio: 1500},
 ]
+localStorage.setItem(`cafes-en-filtro`, JSON.stringify(cafesEnFiltro));
 
 const cafesEnEspresso = [
     {nombre:"Ristretto", descripcion:"Vacia por ahora", precio: 1800},
@@ -38,19 +40,21 @@ const cafesEnEspresso = [
     {nombre:"Latte", descripcion:"Vacia por ahora", precio:1800},
     {nombre:"Capuccino", descripcion:"Vacia por ahora", precio: 1800},
 ]
+localStorage.setItem(`cafes-en-espresso`, JSON.stringify(cafesEnEspresso));
 
 const cantidades = [
     {cantidad:"250g", descripcion:"Ideal para un consumidor de cafe solitario", precio: 1000},
     {cantidad:`500g`, descripcion:"Ideal para un consumidor de cafe solitario", precio: 1800},
     {cantidad:`1000g`, descripcion:"Ideal para un consumidor de cafe solitario", precio: 3250},
 ]
+localStorage.setItem(`cantidades-disponibles`, JSON.stringify(cantidades));
 
 const frecuencias = [
-    {frecuencia:"Por semana", descripcion:"Ideal para un consumidor de cafe solitario", precio: 1800},
+    {frecuencia:"Por semana", descripcion:"Ideal para un consumidor de cafe solitario", precio: 2000},
     {frecuencia:"Por quincena", descripcion:"Ideal para un consumidor de cafe solitario", precio: 1500},
     {frecuencia:"Por mes", descripcion:"Ideal para un consumidor de cafe solitario", precio: 1200},
 ]
-
+localStorage.setItem(`frecuencias-de-entrega`, JSON.stringify(frecuencias));
 
 
 //SWEET ALERT
