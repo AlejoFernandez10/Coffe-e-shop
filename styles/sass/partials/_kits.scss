@@ -50,8 +50,20 @@
     }
 
     .kits-container{
+
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns:1fr;
+
+        @include tablet{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 10px;
+        }
+        @include desktop{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
         gap: 25px;
         margin-top: 50px;
 
@@ -66,40 +78,46 @@
 
             img{
                 padding-top: 40px;
+                padding-bottom: 30px;
             }
             .descripcion{
-                padding-top: 40px;
-                padding-left: 40px;
-
+                
+                height: auto;
                 width: 100%;
-                @include flex(column,center,flex-start);                
+                @include flex(column,center,center);
+                
+                .agregarCarritoBtn{
+                    background-color:transparent;
+                    font-family: $fuentePrincipal;
+                    font-size: 15px;
+                    margin-top: 30px;
+    
+                    @include padding (5px,5px,20px,20px);
+                    border: 2px solid $colorSecundario-400;
+                    color: $colorSecundario-400;
+                    border-radius: 6px;
+
+                    align-self: center;
+                    cursor: pointer;
+    
+                    &:hover{
+                        background-color: $colorSecundario-400;
+                        color: $colorPrincipal-50;
+                        font-weight: bold;
+                        transition: .3s;
+                    }
+            }
+                
+            }
+                         
             }
 
             
-                .agregarCarritoBtn{
-                        background-color:transparent;
-                        font-family: $fuentePrincipal;
-                        font-size: 15px;
-        
-                        @include padding (5px,5px,20px,20px);
-                        border: 2px solid $colorSecundario-400;
-                        color: $colorSecundario-400;
-                        border-radius: 6px;
-
-                        align-self: center;
-                        cursor: pointer;
-        
-                        &:hover{
-                            background-color: $colorSecundario-400;
-                            color: $colorPrincipal-50;
-                            font-weight: bold;
-                            transition: .3s;
-                        }
-                }
+                
                 
             
             
         }
     }
 
-}
+

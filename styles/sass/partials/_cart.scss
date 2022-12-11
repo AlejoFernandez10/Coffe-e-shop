@@ -36,6 +36,53 @@
             height: 25rem;
             @include flex(column, center,flex-start);
         }
+
+
+        .button-container{
+            width: 100%;
+            @include flex(row,center,center);
+            margin-top: 30px;
+
+            #vaciar-carrito{
+                border: 2px solid #f00;
+                color: #f00;
+
+                &:hover{
+                    background-color: #f00;
+                    color: #fff;
+                }
+            }
+
+            .carrito-button{
+                background-color:transparent;
+                    font-family: $fuentePrincipal;
+                    font-size: 15px;
+                    
+    
+                    @include padding (5px,5px,20px,20px);
+                    border: 2px solid $colorSecundario-400;
+                    color: $colorSecundario-400;
+                    border-radius: 6px;
+
+                    align-self: center;
+                    cursor: pointer;
+    
+                    &:hover{
+                        background-color: $colorSecundario-400;
+                        color: $colorPrincipal-50;
+                        font-weight: bold;
+                        transition: .3s;
+                    }
+                    &:last-child{
+                        margin-left: 30px;
+                    }
+
+
+                    
+            }
+            
+        }
+
         
         .productos-container{
             width: 100%;
@@ -51,6 +98,30 @@
                 max-width: 800px;
                 @include flex(row, space-between,center);
                 
+            }
+
+            .kit-seleccionado{
+                width: 100%;
+                @include flex(column, center,center);
+
+                img{
+                    height: 150px;
+                    width: 150px;
+                }
+                .tipos{
+                    color: $colorSecundario-400;
+                    font-size: 20px;
+                    
+                    span{
+                        color: #000;
+                        font-size: 18px;
+                    }
+                }
+                
+
+                .no-button{
+                    display: none;
+                }
             }
         }
 

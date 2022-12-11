@@ -64,12 +64,13 @@ const sweetAlert = ()=>{
         title: 'Perfecto!',
         text: 'Desea realizar el pago?',
         icon: 'success',
-        confirmButtonText: '<a href="./cart.html" style="text-decoration:none;color:#fff;">Ir al carrito</a>'
+        confirmButtonText: '<a href="../pages/cart.html" style="text-decoration:none;color:#fff;">Ir al carrito</a>'
       } )
       
     }
 
 carritoBtn.addEventListener(`click`, ()=>{
+    sessionStorage.removeItem(`kit-seleccionado`);
     sweetAlert()
 })
 
