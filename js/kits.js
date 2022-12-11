@@ -155,7 +155,7 @@ agregarCarritoBtn.forEach(boton =>{
             title: 'Producto agregado!',
             text: 'Desea realizar el pago?',
             icon: 'success',
-            confirmButtonText: '<a href="../pages/cart.html" style="text-decoration:none;color:#fff;">Ir al carrito</a>'
+            confirmButtonText: '<a href="./cart.html" style="text-decoration:none;color:#fff;">Ir al carrito</a>'
         } )  
 
         if(sessionStorage.getItem(`kit-seleccionado`) != undefined || sessionStorage.getItem(`Cafe-solicitado`) != undefined ){
